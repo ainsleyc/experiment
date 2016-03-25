@@ -153,6 +153,39 @@
           }
         }
       ]  
+    },
+    {
+      "title": "Text input box.",
+      "type": "single",
+      "transition": {
+        "type": "clickItem"
+      },
+      "items": [
+        {
+          "type": "text",
+          "text": "Do you have any suggestions?",
+          "location": {
+            "x": 10,
+            "y": 10
+          }
+        },
+        {
+          "type": "textInput",
+          "location": {
+            "x": 20,
+            "y": 20
+          }
+        },
+        {
+          "type": "button",
+          "text": "Continue",
+          "clickTarget": true,
+          "location": {
+            "x": 30,
+            "y": 30
+          }
+        }
+      ]  
     }
   ]
 }
