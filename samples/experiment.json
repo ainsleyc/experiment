@@ -4,12 +4,15 @@
   },
   "slides": [
     {
-      "title": "Introduction",
+      "title": "Single image slide",
       "description": "Introductory slide.",
       "type": "single",
-      "timing": {
-        "enter": 0,
-        "exit": 10
+      "transition": {
+        "type": "timed",
+        "timing": {
+          "enter": 0,
+          "exit": 10
+        }
       },
       "items": [
         {
@@ -19,26 +22,17 @@
           "location": {
             "x": 54,
             "y": 100
-          },
-          "timing": {
-            "enter": 0,
-            "exit": 10
-          },
-          "transition": {
-            "type": "click",
-            "timing": {
-              "enter": 0,
-              "exit": 10
-            }
           }
         }
       ]  
     },
     {
-      "title": "Word bucket",
-      "description": "Select words from a bucket",
+      "title": "Repeated slides from word buckets",
       "type": "repeat",
-      "count": 10,
+      "repeatCount": 10,
+      "transition": {
+        "type": "clickItem"
+      },
       "items": [
         {
           "type": "text",
@@ -47,29 +41,24 @@
           "location": {
             "x": 10,
             "y": 10
-          },
-          "transition": {
-            "type": "click",
-            "timing": {
-              "enter": 0,
-              "exit": 10
-            }
           }
         },
         {
           "type": "text",
-          "select": "randomNoReplacement",
-          "source": "http://cloudbucket/wordBucket1.txt",
+          "select": "randomWithReplacement",
+          "source": "http://cloudbucket/wordBucket2.txt",
           "location": {
             "x": 20,
             "y": 20
-          },
-          "transition": {
-            "type": "click",
-            "timing": {
-              "enter": 0,
-              "exit": 10
-            }
+          }
+        },
+        {
+          "type": "text",
+          "select": "serial",
+          "source": "http://cloudbucket/wordBucket3.txt",
+          "location": {
+            "x": 30,
+            "y": 30
           }
         }
       ]  
