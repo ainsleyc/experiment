@@ -116,6 +116,43 @@
           }
         }
       ]  
+    },
+    {
+      "title": "Mouse multiple choice questions.",
+      "type": "repeat",
+      "repeatCount": 10,
+      "transition": {
+        "type": "clickItem"
+      },
+      "items": [
+        {
+          "type": "text",
+          "select": "serial",
+          "source": "http://cloudbucket/multipleChoiceQuestionsBucket1.txt",
+          "location": {
+            "x": 10,
+            "y": 10
+          }
+        },
+        {
+          "type": "radioSelect",
+          "select": "serial",
+          "source": "http://cloudbucket/multipleChoiceAnswersBucket1.txt",
+          "location": {
+            "x": 20,
+            "y": 20
+          }
+        },
+        {
+          "type": "button",
+          "text": "Continue",
+          "clickTarget": true,
+          "location": {
+            "x": 30,
+            "y": 30
+          }
+        }
+      ]  
     }
   ]
 }
