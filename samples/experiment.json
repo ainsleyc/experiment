@@ -1,0 +1,78 @@
+{
+  "config": {
+    "stylesheet": "http://cloudbucket/test.css"
+  },
+  "slides": [
+    {
+      "title": "Introduction",
+      "description": "Introductory slide.",
+      "type": "single",
+      "timing": {
+        "enter": 0,
+        "exit": 10
+      },
+      "items": [
+        {
+          "type": "image",
+          "select": "single",
+          "source": "http://cloudbucket/image.gif",
+          "location": {
+            "x": 54,
+            "y": 100
+          },
+          "timing": {
+            "enter": 0,
+            "exit": 10
+          },
+          "transition": {
+            "type": "click",
+            "timing": {
+              "enter": 0,
+              "exit": 10
+            }
+          }
+        }
+      ]  
+    },
+    {
+      "title": "Word bucket",
+      "description": "Select words from a bucket",
+      "type": "repeat",
+      "count": 10,
+      "items": [
+        {
+          "type": "text",
+          "select": "randomNoReplacement",
+          "source": "http://cloudbucket/wordBucket1.txt",
+          "location": {
+            "x": 10,
+            "y": 10
+          },
+          "transition": {
+            "type": "click",
+            "timing": {
+              "enter": 0,
+              "exit": 10
+            }
+          }
+        },
+        {
+          "type": "text",
+          "select": "randomNoReplacement",
+          "source": "http://cloudbucket/wordBucket1.txt",
+          "location": {
+            "x": 20,
+            "y": 20
+          },
+          "transition": {
+            "type": "click",
+            "timing": {
+              "enter": 0,
+              "exit": 10
+            }
+          }
+        }
+      ]  
+    }
+  ]
+}
