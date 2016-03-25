@@ -4,14 +4,14 @@
   },
   "slides": [
     {
-      "title": "Single image slide",
+      "title": "Single timed image slide",
       "description": "Introductory slide.",
       "type": "single",
       "transition": {
         "type": "timed",
         "timing": {
           "enter": 0,
-          "exit": 10
+          "exit": 50 
         }
       },
       "items": [
@@ -36,8 +36,40 @@
       "items": [
         {
           "type": "text",
+          "text": "This is an experiment.",
+          "location": {
+            "x": 10,
+            "y": 10
+          }
+        },
+        {
+          "type": "button",
+          "text": "Continue",
+          "clickTarget": true,
+          "location": {
+            "x": 20,
+            "y": 20
+          }
+        }
+      ]  
+    },
+    {
+      "title": "Repeated flash slides from word buckets",
+      "type": "repeat",
+      "repeatCount": 10,
+      "transition": {
+        "type": "clickItem",
+        "timing": {
+          "enter": 0,
+          "exit": 10
+        }
+      },
+      "items": [
+        {
+          "type": "text",
           "select": "randomNoReplacement",
           "source": "http://cloudbucket/wordBucket1.txt",
+          "clickTarget": true,
           "location": {
             "x": 10,
             "y": 10
@@ -47,6 +79,7 @@
           "type": "text",
           "select": "randomWithReplacement",
           "source": "http://cloudbucket/wordBucket2.txt",
+          "clickTarget": true,
           "location": {
             "x": 20,
             "y": 20
@@ -56,6 +89,7 @@
           "type": "text",
           "select": "serial",
           "source": "http://cloudbucket/wordBucket3.txt",
+          "clickTarget": true,
           "location": {
             "x": 30,
             "y": 30
