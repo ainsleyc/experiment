@@ -96,6 +96,26 @@
           }
         }
       ]  
+    },
+    {
+      "title": "Keyboard y/n questions.",
+      "type": "repeat",
+      "repeatCount": 10,
+      "transition": {
+        "type": "keyDown",
+        "validKeys": ["y", "n"]
+      },
+      "items": [
+        {
+          "type": "text",
+          "select": "serial",
+          "source": "http://cloudbucket/questionBucket1.txt",
+          "location": {
+            "x": 20,
+            "y": 20
+          }
+        }
+      ]  
     }
   ]
 }
